@@ -1,0 +1,35 @@
+body {
+	font-family:'Lato',sans-serif;
+}
+
+.uppercase {
+	text-transform:uppercase;
+	color:#5d5d5d;
+}
+
+.square-yellow {
+	color: #FFCC00;
+}
+
+.square-red {
+	color: #FF3300;
+}
+
+.square-blue {
+	color: #3399CC;
+}
+
+.title-link {
+	color: #5d5d5d;
+}
+
+.title-spacing {
+	line-height: 250%;
+}
+
+@font-face {
+	font-family:'Lato';
+	font-style:normal;
+	font-weight:400;
+	src:local('Lato Regular'),local(Lato-Regular),url(../fonts/Lato.woff) format("woff");
+}

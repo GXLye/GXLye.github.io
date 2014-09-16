@@ -1,0 +1,175 @@
+.sidebar {
+	float: left;
+	width: 200px;
+	text-align: left;
+}
+
+.sidebar li {
+	color: #ff9300;
+	font-size: large;
+	font-weight: bolder;
+	line-height: 1.5;
+}
+
+.sidebar li a {
+	font-size: medium;
+	font-weight: bold;
+	color: #009193;
+	text-decoration: none;
+}
+
+.sidebar li a:hover {
+	text-decoration: underline;
+}
+
+/* content */
+#main .content{
+	text-align: center;
+	margin-top: -220px;
+}
+
+#main .content h1{
+	color: #ff9300;
+	padding: 0px 0px 0px 250px;
+	text-align: left;
+}
+
+#main .content .breadcrumbs {
+	padding: 0px 0px 0px 250px;
+	text-align: left;
+}
+
+#main .content .breadcrumbs a {
+	text-decoration: none;
+	color: grey;
+}
+
+#main .content .breadcrumbs a:hover {
+	color: black;
+}
+
+#main .content .section-1 {
+	color: #424242;
+	width: 700px;
+	padding: 0px 250px;
+	text-align: justify;
+	font-size: medium;
+	line-height: 150%;
+}
+
+#main .content .section-1 h2 {
+	font-size: x-large;
+	color: #ff9300;
+}
+
+#main .content .section-1 h3 {
+	font-size: larger;
+	color: #009193;
+}
+
+#main .content .section-1 .top-button {
+	font-size: smaller;
+	text-align: center;
+	color: #ffffff;
+	text-decoration: none;
+	border: 2px solid #008587;
+	padding: 3px 5px;
+	background: #009193;
+	width: 100px;
+}
+
+#main .content .section-1 ul {
+	list-style: disc;
+}
+
+#main .content .section-1 a {
+	text-decoration: none;
+	color: #ff9300;
+}
+
+#main .content .section-1 a:hover {
+	text-decoration: underline;
+}
+
+#main .content .section-1 li a {
+	text-decoration: none;
+	color: #009193;
+}
+
+#main .content .section-1 .recipe_img img {
+	height: 300px;
+	border: 10px double #009193;
+}
+
+#main .content .section-1 .recipe_note ul {
+	list-style-type: square;
+}
+
+#main .content .section-1 .recipe_ingredient ul {
+	margin-right: 30px;
+}
+
+#main .content .section-1 li {
+	margin-bottom: 10px;
+}
+
+#main .content .section-1 .recipe_step li {
+	margin-bottom: 10px;
+}
+
+#main .content .section-1 .stories img {
+	height: 250px;
+	margin-right: 15px;
+	margin-bottom: 25px;
+}
+
+#main .content .section-1 .stories {
+	vertical-align: top;
+}
+
+#main .content .section-1 .pricing {
+	width: 690px;
+	border: 5px dashed #009193;
+	border-radius: 15px;
+}
+
+#main .content .section-1 .pricing th {
+	border-bottom: 2px solid #009193;
+	text-align: center;
+	vertical-align: middle;
+	padding: 5px;
+}
+
+#main .content .section-1 .pricing td {
+	text-align: center;
+	padding: 5px;
+}
+
+#main .sideline {
+	float: right;
+	margin-top: 55px;
+}
+
+#main .sideline img {
+	width: 200px;
+}
+
+#main .sideline1 {
+	margin-left: 0px;
+}
+
+#main .sideline1 img {
+	width: 250px;
+	height: 250px;
+}
+
+#main .content .section-1 .menu-list li {
+	color: #009193;
+	list-style: disc;
+	font-size: large;
+	font-weight: bold;
+}
+
+.info_choice h2 a:hover{
+        text-decoration: underline;
+}

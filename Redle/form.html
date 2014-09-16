@@ -1,0 +1,184 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/content.css" type="text/css">
+
+    <title>Redle :: Health Care</title>
+</head>
+
+<body>
+    <div id="container">
+        <!-- header -->
+
+        <div id="header">
+            <div class="wrapper" id="top">
+                <div class="logo">
+                    <a href="index.html">Redle Health Care</a>
+                </div>
+
+                <ul class="menu">
+                    <li><a href="index.html">Home</a></li>
+
+                    <li><a href="service.html">Our Service</a></li>
+
+                    <li><a href="info.html">Info</a></li>
+
+                    <li><a href="contact.html">Contact</a></li>
+
+                    <li><a href="support.html" class="button">Health Issue ?</a></li>
+                </ul>
+            </div>
+        </div><!-- header end -->
+        <hr>
+        <!-- main -->
+
+        <div id="main">
+            <div class="wrapper">
+                <!-- banner -->
+
+                <div class="banner"><img src="images/banner.jpg" alt="Healthy Veggies"></div><!-- banner end -->
+                <!-- sidebar -->
+
+                <div class="sidebar">
+                    <ul>
+                        <li>Health Enquiry</li>
+                        
+                        <li><a href="contact.html" onclick="history.back();return false;">Go back</a></li>
+                    </ul>
+                </div><!-- sidebar end -->
+                <!-- content -->
+
+                <div class="content">
+                    <div class="breadcrumbs">
+                        <a href="index.html">Home</a> &gt; <a href="contact.html">Contact</a>
+                    </div>
+
+                    <h1>Health Enquiry Form</h1>
+
+                    <div class="section-1">
+                        <h3>Expert Advise</h3>
+
+                        <p>Please fill in the form below. The more information you provide the more effectively we can research your enquiry.</p>
+
+                        <p>There are some items that you must fill in (marked with an asterisk * ).</p>
+
+                        <form method="post" action="thanks.html">
+                            <h2>Contact Details</h2>
+
+                            <table style="width: 70%; border: 5px dotted grey; border-radius: 10px; padding: 15px;">
+                                <tr>
+                                    <td>
+                                        <h3><label>*First name:<br>
+                                        <input type="text" id="firstName" placeholder="First name" autofocus="autofocus" required="required"></label></h3>
+                                    </td>
+
+                                    <td>
+                                        <h3><label>Last name:<br>
+                                        <input type="text" id="lastName" placeholder="Last name" size="15"></label></h3>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td colspan="2">
+                                        <h3><label>*Telephone: <input title="Must follow the format: (555) 555-5555" type="tel" placeholder="(###) ###-####" pattern="\(\d(3)\) \d(3)-\d(4)" required="required" size="35"></label></h3>
+                                    </td>
+
+                                    <td>
+                                        <h3><label>*Email:<br>
+                                        <input type="email" id="email" placeholder="name@domain.com" required="required" size="25"></label></h3>
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <h2>Personal Details</h2>
+
+                            <table style="width: 70%; border: 5px dotted grey; border-radius: 10px; padding: 15px;">
+                                <tr>
+                                    <td>
+                                        <h3><label>Date of Birth:<br>
+                                        <input type="date"></label></h3>
+                                    </td>
+
+                                    <td>
+                                        <h3><label>Gender:<br>
+                                        <input name="gender" type="radio" value="male" checked="checked"> Male</label><br>
+                                        <label><input name="gender" type="radio" value="female"> Female</label><br></h3>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <h3><label>Ethnicity:&nbsp; <select name="ethnicity">
+                                            <option selected="selected">
+                                                Select Race
+                                            </option>
+
+                                            <option>
+                                                Malay
+                                            </option>
+
+                                            <option>
+                                                Indian
+                                            </option>
+
+                                            <option>
+                                                Chinese
+                                            </option>
+
+                                            <option>
+                                                Other
+                                            </option>
+
+                                            <option>
+                                                Prefer not to say
+                                            </option>
+                                        </select></label></h3>
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <h2>Your Enquiry</h2>
+
+                            <table style="width: 70%; border: 5px dotted grey; border-radius: 10px; padding: 15px;">
+                                <tr>
+                                    <td>
+                                        <h3><label>*Details:<br>
+                                        <textarea name="comments" rows="4" cols="36" required="required">
+Enter your enquiries here.
+</textarea></label></h3>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <h3><label>Kind of answers preferred:<br></label></h3><label><input name="complexity" type="radio" value="advanced" checked="checked"> Advanced&nbsp;&nbsp;&nbsp;</label> <label><input name="complexity" type="radio" value="basic"> Basic&nbsp;&nbsp;&nbsp;</label> <label><input name="complexity" type="radio" value="both"> Both</label>
+                                    </td>
+                                </tr>
+                            </table><br>
+
+                            <table style="border: 5px dotted grey; border-radius: 10px; padding: 15px;">
+                                <tr>
+                                    <td><input type="submit" value="Submit" class="top-button"></td>
+
+                                    <td><input type="reset" value="Clear" class="top-button"></td>
+
+                                    <td><a href="#top" class="top-button">Back to Top</a></td>
+                                </tr>
+                            </table>
+                        </form><br>
+                    </div>
+                </div><!-- main end -->
+                <hr>
+                <!-- footer -->
+
+                <div id="footer">
+                    <p>Redle 2013 - <a href="http://GXLye.me">GXLye.me</a> &amp; Sunny Lim. All rights reserved.</p>
+                </div><!-- footer end -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>
