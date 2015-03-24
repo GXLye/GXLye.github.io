@@ -3,9 +3,11 @@
 <html>
 <head>
     <title>GXLye.me | Resume</title>
-    <link rel="stylesheet" href="css/uikit.almost-flat.min.css" type="text/css">
+    <link rel="stylesheet" href="css/uikit.min.css" type="text/css">
+    <link rel="stylesheet" href="css/slidenav.min.css" type="text/css">
     <script src="js/jquery.js" type="text/javascript"></script>
     <script src="js/uikit.min.js" type="text/javascript"></script>
+    <script src="js/components/lightbox.min.js" type="text/javascript"></script>
     <style type="text/css">
 body {
 	font-family:'Lato',sans-serif;
@@ -36,6 +38,10 @@ body {
 	line-height: 250%;
 }
 
+a:hover {
+	text-decoration: none;
+}
+
 @font-face {
 	font-family:'Lato';
 	font-style:normal;
@@ -54,7 +60,8 @@ body {
         <br>
         <br>
         <!-- White Spaces END -->
-
+        
+        <!-- Mobile Header-->
         <div class="uk-panel uk-panel-header uk-text-center uk-visible-small">
             <div id="top" class="uk-panel-title">
                 <div class="uk-text-large title-spacing">
@@ -64,6 +71,7 @@ body {
             </div><span class="uk-text-small uppercase">+6 016 402 8599&emsp;&emsp;|&emsp;&emsp;<a href="mailto:gxlye@me.com" class="title-link">gxlye@me.com</a></span>
         </div>
 
+        <!-- Desktop/Tablet Header-->
         <div class="uk-grid uk-hidden-small">
             <div class="uk-width-3-10">
                 <div class="uk-text-large uk-text-right">
@@ -83,6 +91,7 @@ body {
         <br>
         <!-- White Spaces END -->
         
+        <!-- Mobile View -->
         <div class="uk-text-center uk-visible-small">
             <span class="uk-text-small uppercase">Language Spoken</span>
             <span class="uk-text-muted"><br>English, Chinese, Malay<br></span>
@@ -103,8 +112,8 @@ body {
                 <dt class="uppercase">Computer Skills and Competences</dt>
                 <dt class="uk-text-small uk-text-primary uppercase">Programming Languages</dt>
                 <dd><span data-uk-tooltip="{pos:'bottom-left'}" title="iOS/OS X Programming Language">Swift, Objective-C,</span> 
-                C++, C, PHP,<br>
-                JavaScript, Java, <span data-uk-tooltip="{pos:'bottom'}" title="SAP Programming Language">ABAP</span><br></dd>
+                C++, C,<br>
+                PHP, Java, <span data-uk-tooltip="{pos:'bottom'}" title="SAP Programming Language">ABAP</span><br></dd>
 
                 <dt class="uk-text-small uk-text-primary uppercase">Database Management Systems</dt>
                 <dd>Oracle, MySQL, Filemaker Pro,<br>
@@ -113,12 +122,12 @@ body {
                 <dt class="uk-text-small uk-text-primary uppercase">Operating Systems</dt>
                 <dd>Mac OS X, Windows, Linux</dd>
 
-                <dt class="uk-text-small uk-text-primary uppercase">Markup Languages</dt>
-                <dd><a data-uk-tooltip="{pos:'bottom'}" title="<b>Click to see</b><br>Website Design Assignment" href="Redle/" target="_blank">HTML 5, CSS3</a></dd>
+                <dt class="uk-text-small uk-text-primary uppercase">Web Development</dt>
+                <dd><a data-uk-tooltip="{pos:'bottom'}" title="<b>Click to see</b><br>Multimedia Group Assignment" href="http://cupnoodle.github.io/trycoding/" target="_blank">HTML 5, CSS3, JavaScript</a></dd>
 
                 <dt class="uk-text-small uk-text-primary uppercase">Productivity Suites</dt>
-                <dd>Adobe CC<br><span data-uk-tooltip="{pos:'bottom'}" title="Graphic Design: Logo, Posters etc.">(Photoshop, Illustrator,</span> <span data-uk-tooltip="{pos:'bottom'}" title="2D Animation, Actionscript">Flash)
-                </span></dd>
+                <dd>Adobe CC<br>(<a href="images/Society-5.jpg" data-uk-lightbox="{group:'society'}" title="IT Fair Promotional Image">Photoshop, Illustrator,</a> <span data-uk-tooltip="{pos:'bottom'}" title="2D Animation, Actionscript">Flash)
+                </span><a href="images/Society-6.jpg" data-uk-lightbox="{group:'society'}" title="IT Fair Promotional Image"></a></dd>
                 
                 <dt class="uk-text-small uppercase"><a href="#top" data-uk-smooth-scroll="{offset: 50}"><i class="uk-icon-chevron-up title-spacing">&emsp;Back to Top</i></a></dt>
             </dl>
@@ -130,13 +139,13 @@ body {
                         <dt class="uppercase">Awards and Participations</dt>
                         
                         <dt class="uk-text-small uk-text-primary uppercase">July 2013 - July 2014</dt>
-                        <dd><a class="uk-button-link" href="http://www.utar.edu.my/dsa-pk/index.jsp?fcatid=411&fcontentid=1811&f2ndcontentid=10520" target="_blank">Secretary of Computer Society</a></dd>
+                        <dd><a href="http://www.utar.edu.my/dsa-pk/index.jsp?fcatid=411&fcontentid=1811&f2ndcontentid=10520" target="_blank">Secretary of Computer Society</a></dd>
 
                         <dt class="uk-text-small uk-text-primary uppercase">January 2014</dt>
-                        <dd><span data-uk-tooltip="{pos:'bottom'}" title="Title: Hilti Social Redefined">Finalist<br>2014 Hilti Innovation Competition</span></dd>
+                        <dd><a href="images/Hilti-2.jpg" data-uk-lightbox="{group:'hilti'}" title="Group Photo">Finalist</a><br>2014 Hilti Innovation Competition</span></dd>
 
                         <dt class="uk-text-small uk-text-primary uppercase">June 2013 - April 2014</dt>
-                        <dd>Most Talented UTARian Award<br>UTAR Student Awards 2014</dd>
+                        <dd><a href="http://www.utar.edu.my/econtent_sub.jsp?fcatid=16&fcontentid=10663" target="_blank">Most Talented UTARian Award</a><br>UTAR Student Awards 2014</dd>
 
                         <dt class="uk-text-primary">Reference</dt>
 
@@ -169,14 +178,15 @@ body {
                     </dl>
             </div>
         </div>
-
+        
+        <!-- Desktop/Tablet View -->
         <div class="uk-width-medium-2-3 uk-container-center uk-hidden-small">
             <ul class="uk-text-center uk-subnav uk-subnav-pill" data-uk-switcher="{connect:'#my-id'}">
-                <li><a href="">Skills & Competences</a></li>
+                <li><a href="">Skills &amp; Competences</a></li>
 
-                <li><a href="">Awards & Participations</a></li>
+                <li><a href="">Awards &amp; Participation</a></li>
 
-                <li><a href="">Education & Training</a></li>
+                <li><a href="">Education &amp; Training</a></li>
             </ul><!-- This is the container of the content items -->
 
             <ul id="my-id" class="uk-switcher">
@@ -196,20 +206,26 @@ body {
 
                         <dt class="uk-text-small uk-text-right uk-text-break uppercase">Competences</dt>
 
-                        <dd><span class="uk-text-primary uk-text-bold">Programming Languages:</span><br>
-                        <span data-uk-tooltip="{pos:'bottom'}" title="iOS/OS X Programming Language">Swift, Objective-C,</span> C++, C, PHP, JavaScript, Java, <span data-uk-tooltip="{pos:'bottom'}" title="SAP Programming Language">ABAP</span><br>
+                        <dd><span class="uk-text-primary uk-text-bold">Languages:</span><br>
+                        <span data-uk-tooltip="{pos:'bottom'}" title="iOS/OS X Programming Language">Swift, Objective-C,</span> C++, C, <a data-uk-tooltip="{pos:'bottom'}" title="<b>Click to see</b><br>Website Design Assignment" href="Redle/" target="_blank">HTML, CSS, JavaScript,</a> PHP, Java<br>
                         <br>
-                        <span class="uk-text-primary uk-text-bold">Database Management Systems:</span><br>
-                        Oracle, MySQL, Filemaker Pro, SQLite, Microsoft Access<br>
+                        <span class="uk-text-primary uk-text-bold">Frameworks:</span><br>
+                        <a data-uk-tooltip="{pos:'bottom'}" title="<b>Click to see</b><br>Multimedia Group Assignment" href="http://cupnoodle.github.io/trycoding/" target="_blank">Bootstrap, Polymer,</a> UIkit<br>
+                        <br>
+                        <span class="uk-text-primary uk-text-bold">Databases:</span><br>
+                        Oracle, MySQL, <a href="images/Eterno-1.jpg" data-uk-lightbox="{group:'eterno'}" title="Dashboard"><span data-uk-tooltip="{pos:'bottom'}" title="<b>Eterno Music Center</b><br>Student Management System">Filemaker Pro,</span></a> SQLite, Microsoft Access<br>
+                        <a href="images/Eterno-2.jpg" data-uk-lightbox="{group:'eterno'}" title="Schedule"></a>
+                        <a href="images/Eterno-3.jpg" data-uk-lightbox="{group:'eterno'}" title="Payment"></a>
+                        <a href="images/Eterno-4.jpg" data-uk-lightbox="{group:'eterno'}" title="Registration"></a>
                         <br>
                         <span class="uk-text-primary uk-text-bold">Operating Systems:</span><br>
                         Mac OS X, Windows, Linux<br>
                         <br>
-                        <span class="uk-text-primary uk-text-bold">Markup Languages:</span><br>
-                        <a data-uk-tooltip="{pos:'bottom'}" title="<b>Click to see</b><br>Website Design Assignment" href="Redle/" target="_blank">HTML 5, CSS3</a><br>
-                        <br>
-                        <span class="uk-text-primary uk-text-bold">Productivity Suites:</span><br>
-                        Adobe CC <span data-uk-tooltip="{pos:'bottom'}" title="Graphic Design: Logo, Posters etc.">(Photoshop, Illustrator,</span> <span data-uk-tooltip="{pos:'bottom'}" title="2D Animation, Actionscript">Flash)</span><br>
+                        <span class="uk-text-primary uk-text-bold">Softwares:</span><br>
+                        Adobe CC <span data-uk-tooltip="{pos:'bottom'}" title="Graphic Design: Logo, Posters etc.">(<a href="images/Society-1.jpg" data-uk-lightbox="{group:'society'}" title="Annual General Meeting Poster">Photoshop, Illustrator,</a></span> <span data-uk-tooltip="{pos:'bottom'}" title="2D Animation, Actionscript">Flash),</span> Microsoft Office<br>
+                        <a href="images/Society-2.jpg" data-uk-lightbox="{group:'society'}" title="Society Roll-up Banner Design"></a>
+                        <a href="images/Society-3.jpg" data-uk-lightbox="{group:'society'}" title="Photoshop Workshop Logos"></a>
+                        <a href="images/Society-4.jpg" data-uk-lightbox="{group:'society'}" title="IT Fair Contest Poster"></a>
                         <br></dd>
                     </dl>
                 </li><!-- Awards and Participations -->
@@ -222,7 +238,7 @@ body {
 
                         <dt class="uk-text-small uk-text-right uppercase">Position</dt>
 
-                        <dd><a class="uk-button-link" href="http://www.utar.edu.my/dsa-pk/index.jsp?fcatid=411&fcontentid=1811&f2ndcontentid=10520">Secretary of Computer Society</a></dd><!-- White Spaces START -->
+                        <dd><a href="http://www.utar.edu.my/dsa-pk/index.jsp?fcatid=411&fcontentid=1811&f2ndcontentid=10520" target="_blank">Secretary of Computer Society</a></dd><!-- White Spaces START -->
 
                         <dt><br></dt>
 
@@ -234,7 +250,7 @@ body {
 
                         <dt class="uk-text-small uk-text-right uppercase">Position</dt>
 
-                        <dd><span data-uk-tooltip="{pos:'bottom'}" title="Title: Hilti Social Redefined">Finalist - 2014 Hilti Innovation Competition</span></dd><!-- White Spaces START -->
+                        <dd><a href="images/Hilti-1.jpg" data-uk-lightbox="{group:'hilti'}" title="Team Photo"><span data-uk-tooltip="{pos:'bottom'}" title="Title: Hilti Social Redefined">Finalist - 2014 Hilti Innovation Competition</span></a></dd><!-- White Spaces START -->
 
                         <dt><br></dt>
 
@@ -246,7 +262,7 @@ body {
 
                         <dt class="uk-text-small uk-text-right uppercase">Award</dt>
 
-                        <dd>Most Talented UTARian Award - UTAR Student Awards 2014</dd><!-- White Spaces START -->
+                        <dd><a href="images/Talented.jpg" data-uk-lightbox title="<b>Group Photo with other winners and the University Presidents.</b> (I'm the one in the middle)">Most Talented UTARian Award -</a><a href="http://www.utar.edu.my/econtent_sub.jsp?fcatid=16&fcontentid=10663" target="_blank" data-uk-tooltip="{pos:'bottom'}" title="Click to view UTAR News"> UTAR Student Awards 2014</a></dd><!-- White Spaces START -->
 
                         <dt><br></dt>
 
@@ -262,7 +278,7 @@ body {
                     <dl class="uk-description-list uk-description-list-horizontal">
                         <dt class="uk-text-small uk-text-right uppercase">Dates</dt>
 
-                        <dd>2011 - Present</dd>
+                        <dd>2012 - Present</dd>
 
                         <dt class="uk-text-small uk-text-right uppercase">Programme</dt>
 
@@ -316,9 +332,9 @@ body {
     <footer>
     <div class="uk-text-center">
             <ul class="uk-subnav uk-subnav-line">
-                <li><a href="http://FB.me/GXLye"><i class="uk-icon-facebook"></i></a></li>
-
                 <li><a href="http://twitter.com/GXLye"><i class="uk-icon-twitter"></i></a></li>
+
+                <li><a href="http://github.com/GXLye"><i class="uk-icon-github-alt"></i></a></li>
 
                 <li><a href="https://my.linkedin.com/in/GXLye"><i class="uk-icon-linkedin"></i></a></li>
             </ul>
