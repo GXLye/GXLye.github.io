@@ -18,13 +18,15 @@
 	</head>
 	<body>
 		<div id="canvas-holder">
-			<canvas id="chart-area" width="500" height="500"/>
+			<canvas id="chart-area" width="500" height="500"/><br>
+			<button type="submit" class="btn btn-default btn-lg" onclick="countUser()">Count</button>
 		</div>
 
 
 	<script>
 
-	Parse.initialize("7UFsHzCG5NRgycDbxVDDU0RZHhK81jWVWcBZHMOB", "TyxYhPqxv3VWwQHxqq947dxnuLVQwwkGgCCgwIyU");
+	function countUser() {
+		Parse.initialize("7UFsHzCG5NRgycDbxVDDU0RZHhK81jWVWcBZHMOB", "TyxYhPqxv3VWwQHxqq947dxnuLVQwwkGgCCgwIyU");
 
     var mCount = 0
     var fCount = 0
@@ -61,10 +63,8 @@
 
 			];
 
-			window.onload = function(){
-				var ctx = document.getElementById("chart-area").getContext("2d");
-				window.myDoughnut = new Chart(ctx).Doughnut(doughnutData, {responsive : true});
-			};
+			var ctx = document.getElementById("chart-area").getContext("2d");
+			window.myDoughnut = new Chart(ctx).Doughnut(doughnutData, {responsive : true});
 
           //alert('Male: ' + mCount + '; Female: ' + fCount)
         },
@@ -72,6 +72,10 @@
           alert("Error: " + error.code + " " + error.message);
         }
       });
+
+    return false
+	}
+	
 
 		
 
