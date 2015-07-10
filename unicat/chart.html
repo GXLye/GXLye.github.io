@@ -32,7 +32,7 @@
   <img src="images\logo-full.png" alt="UniCAT - Join us today!" style="width:80%"><br><br>
     </div>
     <div class="col-md-6">
-    <div class="form-group form-group-lg">
+    <!-- <div class="form-group form-group-lg">
     	<label for="usernameInput">Male</label>
     	<input type="username" class="form-control" id="usernameInput" placeholder="Male" style="width:80%">
     </div>
@@ -40,7 +40,9 @@
     <div class="form-group form-group-lg">
     	<label for="passwordInput">Female</label>
     	<input type="password" class="form-control" id="passwordInput" placeholder="Female" style="width:80%">
-    </div>
+    </div> -->
+
+    <canvas id="Chart" width="400" height="400"></canvas>
 
     <button type="submit" class="btn btn-default btn-lg" onclick="countUser()">Count</button>
 </div>
@@ -75,7 +77,7 @@
       userQuery.find({
 
         success: function(results) {
-          alert("Successfully retrieved " + results.length + " scores.");
+          //alert("Successfully retrieved " + results.length + " scores.");
           // Do something with the returned Parse.Object values
           total = results.length
 
@@ -89,9 +91,29 @@
             }
             //alert(object.id + ' - ' + object.get('playerName'));
           }
-          //document.getElementById("usernameInput").value = mCount
-          //document.getElementById("passwordInput").value = fCount
-          alert('Male: ' + mCount + '; Female: ' + fCount)
+          document.getElementById("usernameInput").value = mCount
+          document.getElementById("passwordInput").value = fCount
+
+          var ctx = document.getElementById("Chart").getContext("2d");
+          //var myNewChart = new Chart(ctx).PolarArea(data);
+          var myDoughnutChart = new Chart(ctx[1]).Doughnut(data,options);
+
+          var data = [
+    {
+        value: mCount,
+        color:"#F7464A",
+        highlight: "#FF5A5E",
+        label: mCount + "Male"
+    },
+    {
+        value: fCount,
+        color: "#46BFBD",
+        highlight: "#5AD3D1",
+        label: fCount + "Female"
+    }
+]
+
+          //alert('Male: ' + mCount + '; Female: ' + fCount)
         },
         error: function(error) {
           alert("Error: " + error.code + " " + error.message);
