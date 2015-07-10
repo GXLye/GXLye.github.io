@@ -96,7 +96,9 @@
 
           var ctx = document.getElementById("Chart").getContext("2d");
           //var myNewChart = new Chart(ctx).PolarArea(data);
-          var myDoughnutChart = new Chart(ctx).Doughnut(data,options);
+          var myDoughnutChart = new Chart(ctx).Doughnut(data, {
+    animateScale: true
+});
 
           var data = [
     {
