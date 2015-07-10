@@ -1,0 +1,133 @@
+<!doctype html>
+<head>
+  <meta charset="utf-8">
+
+  <title>UniCAT</title>
+  <meta name="description" content="UniCAT">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.4.2.min.js"></script>
+  <script src="js/Chart.min.js"></script>
+  <style type="text/css">
+  html, body, .container{
+    height: 100%;
+}
+.container{
+    display: table;
+    vertical-align: middle;
+}
+.vertical-center-row{
+    display: table-cell;
+    vertical-align: middle;
+}
+</style>
+</head>
+
+<body>
+  
+  <div class="container">
+  <div class="row vertical-center-row">
+    <div class="col-md-6">
+  <img src="images\logo-full.png" alt="UniCAT - Join us today!" style="width:80%"><br><br>
+    </div>
+    <div class="col-md-6">
+    <div class="form-group form-group-lg">
+    	<label for="usernameInput">Male</label>
+    	<input type="username" class="form-control" id="usernameInput" placeholder="Male" style="width:80%">
+    </div>
+
+    <div class="form-group form-group-lg">
+    	<label for="passwordInput">Female</label>
+    	<input type="password" class="form-control" id="passwordInput" placeholder="Female" style="width:80%">
+    </div>
+
+    <button type="submit" class="btn btn-default btn-lg" onclick="countUser()">Count</button>
+</div>
+    
+    <div style="display:none" class="error">
+      Looks like there was a problem saving the test object. Make sure you've set your application ID and javascript key correctly in the call to <code>Parse.initialize</code> in this file.
+    </div>
+
+    <div style="display:none" class="success">
+      <p>We've also just created your first object using the following code:</p>
+      
+    </div>
+  </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+  <script type="text/javascript">
+    
+    function countUser() {
+      Parse.initialize("7UFsHzCG5NRgycDbxVDDU0RZHhK81jWVWcBZHMOB", "TyxYhPqxv3VWwQHxqq947dxnuLVQwwkGgCCgwIyU");
+
+      //var userList = Parse.object.extend("User");
+
+      var mCount = 0
+      var fCount = 0
+      var total = 0
+
+      var userQuery = new Parse.Query(Parse.User);
+      //query.equalTo("playerName", "Dan Stemkoski");
+      userQuery.find({
+
+        success: function(results) {
+          alert("Successfully retrieved " + results.length + " scores.");
+          // Do something with the returned Parse.Object values
+          total = results.length
+
+          for (var i = 0; i < results.length; i++) {
+            var object = results[i];
+
+            if (object.get('gender') == "M") {
+              mCount++
+            } else {
+              fCount++
+            }
+            //alert(object.id + ' - ' + object.get('playerName'));
+          }
+          //document.getElementById("usernameInput").value = mCount
+          //document.getElementById("passwordInput").value = fCount
+          alert('Male: ' + mCount + '; Female: ' + fCount)
+        },
+        error: function(error) {
+          alert("Error: " + error.code + " " + error.message);
+        }
+      });
+
+      return false
+    }
+
+    /*
+    function register() {
+    	Parse.initialize("7UFsHzCG5NRgycDbxVDDU0RZHhK81jWVWcBZHMOB", "TyxYhPqxv3VWwQHxqq947dxnuLVQwwkGgCCgwIyU");
+
+    	var user = new Parse.User();
+    	var usernameVal = document.getElementById("usernameInput").value
+    	var passwordVal = document.getElementById("passwordInput").value
+    	user.set("username", usernameVal);
+    	user.set("password", passwordVal);
+    	user.set("email", usernameVal);
+
+    	user.set("phone", "650-555-0000");
+
+    	user.signUp(null, {
+    	success: function(user) {
+    		// Hooray! Let them use the app now.
+    		alert("You are now registered. Username: " + document.getElementById("usernameInput").value);
+    	},
+    	error: function(user, error) {
+    		// Show the error message somewhere and let the user try again.
+    		alert("Error: " + error.code + " " + error.message);
+    	}
+    });
+
+    	return false
+    }*/
+
+    </script>
+    </body>
+    </html>
