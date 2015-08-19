@@ -1,91 +1,215 @@
-<!doctype html>
-<head>
-  <meta charset="utf-8">
+<!DOCTYPE html>
+<html lang="en">
 
-  <title>UniCAT</title>
-  <meta name="description" content="UniCAT">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-  <script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.4.2.min.js"></script>
-  <style type="text/css">
-  html, body, .container{
-    height: 100%;
-}
-.container{
-    display: table;
-    vertical-align: middle;
-}
-.vertical-center-row{
-    display: table-cell;
-    vertical-align: middle;
-}
-</style>
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <meta property="og:title" content="Testers wanted for UniCAT Events" />
+    <meta property="og:site_name" content="UniCAT Events"/>
+    <meta property="og:url" content="http://gxlye.me/UniCAT"/>
+    <meta property="og:description" content="Find out what events and activities are happening near you right now. As for event organisers, UniCAT Events allows you to promote your activities to geographically relevant audiences. Join as tester now!"/>
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="http://gxlye.me/UniCAT/img/events-promo.jpg" />
+
+    <title>UniCAT Events</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/grayscale.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
 </head>
 
-<body>
-  
-  <div class="container">
-  <div class="row vertical-center-row">
-    <div class="col-md-6">
-  <img src="images\logo-full.png" alt="UniCAT - Join us today!" style="width:80%"><br><br>
-    </div>
-    <div class="col-md-6">
-    <div class="form-group form-group-lg">
-    	<label for="usernameInput">Username</label>
-    	<input type="username" class="form-control" id="usernameInput" placeholder="email@example.com" style="width:80%">
-    </div>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
-    <div class="form-group form-group-lg">
-    	<label for="passwordInput">Password</label>
-    	<input type="password" class="form-control" id="passwordInput" placeholder="Password" style="width:80%">
-    </div>
+    <!-- Navigation -->
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">
+                    <i class="fa fa-graduation-cap"></i>  <span class="light">UniCAT</span> Events
+                </a>
+            </div>
 
-    <button type="submit" class="btn btn-default btn-lg" onclick="register()">Sign Up</button>
-</div>
-    
-    <div style="display:none" class="error">
-      Looks like there was a problem saving the test object. Make sure you've set your application ID and javascript key correctly in the call to <code>Parse.initialize</code> in this file.
-    </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#about">About</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#download">Contact</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Sign Up</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
 
-    <div style="display:none" class="success">
-      <p>We've also just created your first object using the following code:</p>
-      
-    </div>
-  </div>
-  </div>
+    <!-- Intro Header -->
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
+    <header class="intro">
+        
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h1 class="brand-heading">TESTERS WANTED</h1>
+                        <p class="intro-text">A simple way to find out<br>what's (happening) around you</p>
+                        <a href="#about" class="btn btn-circle page-scroll">
+                            <i class="fa fa-angle-double-down animated"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
 
-  <script type="text/javascript">
-    
-    
-    function register() {
-    	Parse.initialize("7UFsHzCG5NRgycDbxVDDU0RZHhK81jWVWcBZHMOB", "TyxYhPqxv3VWwQHxqq947dxnuLVQwwkGgCCgwIyU");
+    <!-- About Section -->
+    <section id="about" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>About UniCAT Events</h2>
+                <p><b>University Cyber AgenT (UniCAT)</b> is a graphical social networking system that is created for the purpose of studying the behaviour of the local population. We aim to further the cause by adding native mobile support to the system, starting with the event module — <b>UniCAT Events</b>. </p>
 
-    	var user = new Parse.User();
-    	var usernameVal = document.getElementById("usernameInput").value
-    	var passwordVal = document.getElementById("passwordInput").value
-    	user.set("username", usernameVal);
-    	user.set("password", passwordVal);
-    	user.set("email", usernameVal);
+                <p><img src="img/events-logo.png"></p>
+                <p>Find out what events and activities are happening near you right now. As for event organisers, UniCAT Events allows you to promote your activities to geographically relevant audiences. </p>
 
-    	user.set("phone", "650-555-0000");
+                <p><ul class="list-inline">
+                    <li>
+                        <img src="img/event.png"><br><br>
+                        <h3>Favourite Event List</h3>
+                    </li>
+                    <li>
+                        <img src="img/menu.png"><br><br>
+                        <h3>Side Menu</h3>
+                    </li>
+                    <li>
+                        <img src="img/editor.png"><br><br>
+                        <h3>Event Editor</h3>
+                    </li>
+                    <li>
+                        <img src="img/interest.png"><br><br>
+                        <h3>Interest List</h3>
+                    </li>
+                </ul> </p>
+            </div>
+        </div>
+    </section>
 
-    	user.signUp(null, {
-    	success: function(user) {
-    		// Hooray! Let them use the app now.
-    		alert("You are now registered. Username: " + document.getElementById("usernameInput").value);
-    	},
-    	error: function(user, error) {
-    		// Show the error message somewhere and let the user try again.
-    		alert("Error: " + error.code + " " + error.message);
-    	}
-    });
+    <!-- Download Section -->
+    <section id="download" class="content-section text-center">
+        <div class="download-section">
+            <div class="container">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2>Contact</h2>
+                    <p>Feel free to email us to provide some feedback on the website and the app, or give us suggestions for new features!</p>
+                <p><a href="mailto:feedback@startbootstrap.com">gxlye@me.com</a>
 
-    	return false
-    }
-    </script>
-    </body>
-    </html>
+                <ul class="list-inline banner-social-buttons">
+                    <li>
+                        <a href="https://twitter.com/GXLye" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/GXLye" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+                    </li>
+                </ul> 
+                    <!-- <a href="http://startbootstrap.com/template-overviews/grayscale/" class="btn btn-default btn-lg">Visit Download Page</a> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Sign up as Tester</h2>
+                <p>Only iOS version is available at this time. Stay tuned for the Android version!</p>
+                <p>To sign up, just key in your first and last name at the form below, along with the Apple ID that you've used for your App Store purchases.</p>
+
+                <form action="https://getonboard.xyz/api/2/UniCAT" method="POST">
+                <div class="form-group form-group-lg">
+                <label for="last_name">SURNAME</label>
+                <input name="last_name" class="form-control" id="last_name" placeholder="Surname" type="text"></div><br>
+                <div class="form-group form-group-lg">
+                <label for="first_name">LAST NAME</label>
+                <input name="first_name" class="form-control" id="first_name" placeholder="First name" type="text"></div><br>
+                <div class="form-group form-group-lg">
+                <label for="email">EMAIL (As Apple ID)</label>
+                <input name="email" class="form-control" id="email" placeholder="Apple ID" type="text"></div><br>
+
+                <button type="submit" class="btn btn-default btn-lg">Sign Up</button>
+                <input name="redirect_url" type="hidden" value="http://gxlye.me/UniCAT/thanks.html">
+                
+                </form></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center"><br><br><br>
+            <p><a href="http://gxlye.me">GXLye.me</a> 2015</p>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+
+    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+    <!-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script> -->
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/grayscale.js"></script>
+
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-66520124-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+
+</html>
