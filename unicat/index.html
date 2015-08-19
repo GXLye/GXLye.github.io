@@ -160,18 +160,18 @@
                 <p>Only iOS version is available at this time. Stay tuned for the Android version!</p>
                 <p>To sign up, just key in your first and last name at the form below, along with the Apple ID that you've used for your App Store purchases.</p>
 
-                <form action="https://getonboard.xyz/api/2/UniCAT" method="POST">
+                <form>
                 <div class="form-group form-group-lg">
                 <label for="last_name">SURNAME</label>
-                <input name="last_name" class="form-control" id="last_name" placeholder="Surname" type="text"></div><br>
+                <input name="last_name" class="form-control" id="last_name" placeholder="Surname" type="text" required></div><br>
                 <div class="form-group form-group-lg">
                 <label for="first_name">FIRST NAME</label>
-                <input name="first_name" class="form-control" id="first_name" placeholder="First name" type="text"></div><br>
+                <input name="first_name" class="form-control" id="first_name" placeholder="First name" type="text" required></div><br>
                 <div class="form-group form-group-lg">
                 <label for="email">EMAIL (As Apple ID)</label>
-                <input name="email" class="form-control" id="email" placeholder="Apple ID" type="text"></div><br>
+                <input name="email" class="form-control" id="email" placeholder="Apple ID" type="email" required></div><br>
 
-                <button type="submit" class="btn btn-default btn-lg">Sign Up</button>
+                <input type="submit" class="btn btn-default btn-lg" id="submitbutton" value="Sign Up"></input>
                 <input name="redirect_url" type="hidden" value="http://gxlye.me/UniCAT/thanks.html">
                 
                 </form></div>
@@ -202,6 +202,37 @@
     <script src="js/grayscale.js"></script>
 
     <script>
+        $( document ).ready(function(){
+            //prevent form default behaviour
+            $("form").submit(function (e) {
+                e.preventDefault();
+                var first_name = $('#first_name').val();
+                var last_name = $('#last_name').val();
+                var email = $('#email').val();
+                
+                $.post("https://getonboard.xyz/api/2/UniCAT", { first_name: first_name, last_name: last_name, email: email });
+                //redirect after send post
+                //window.location.href = "thanks.html";
+                setTimeout(function () {
+                   window.location.href = "thanks.html"; //will redirect to your blog page (an ex: blog.html)
+                }, 1000);
+            });
+            
+            $('#submitbutton').click(function(){
+                /*
+              var first_name = $('#first_name').val();
+              var last_name = $('#last_name').val();
+              var email = $('#email').val();
+            
+              $.post( "https://getonboard.xyz/api/2/UniCAT", { first_name: first_name, last_name: last_name, email: email });
+              //redirect after send post
+              window.location.href = "thanks.html";
+              */
+            });
+        });
+    </script>
+
+    <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -209,8 +240,8 @@
 
   ga('create', 'UA-66520124-1', 'auto');
   ga('send', 'pageview');
+    </script>
 
-</script>
 
 </body>
 
