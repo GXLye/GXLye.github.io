@@ -162,7 +162,6 @@ label {
     text-align: center;
     background: url(../img/intro-bg.jpg) no-repeat bottom center scroll;
     background-attachment: fixed;
-    -webkit-transform: translate3d(0,0,0);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;

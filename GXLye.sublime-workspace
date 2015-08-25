@@ -23,15 +23,15 @@
 			"file": "unicat/index.html",
 			"settings":
 			{
-				"buffer_size": 11695,
+				"buffer_size": 11840,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "unicat/css/grayscale.css",
+			"file": "unicat/css/bootstrap.css",
 			"settings":
 			{
-				"buffer_size": 7704,
+				"buffer_size": 141622,
 				"line_ending": "Unix"
 			}
 		},
@@ -86,7 +86,7 @@
 	],
 	"find":
 	{
-		"height": 35.0
+		"height": 23.0
 	},
 	"find_in_files":
 	{
@@ -155,15 +155,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 11695,
+						"buffer_size": 11840,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								852,
-								852
+								9097,
+								9097
 							]
 						],
 						"settings":
@@ -173,7 +173,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 2499.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -181,25 +181,25 @@
 				},
 				{
 					"buffer": 2,
-					"file": "unicat/css/grayscale.css",
+					"file": "unicat/css/bootstrap.css",
 					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 7704,
+						"buffer_size": 141622,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								704,
-								713
+								0,
+								0
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"tab_size": 4,
+							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
