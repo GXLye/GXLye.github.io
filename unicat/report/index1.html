@@ -14,7 +14,6 @@
 	<script src="js/modernizr.custom.js"></script>
 	<script src="js/Chart.js"></script>
 	<script src="js/legend.js"></script>
-	<script type="text/javascript" src="js/parse-1.4.2.min.js"></script>
 </head>
 <body>
 	<div class="container">
@@ -95,37 +94,66 @@
 	<script src="js/classie.js"></script>
 	<script src="js/cbpScroller.js"></script>
 	<script>
-
-		var interest0 = ""
-		var amount0 = 0
-
-		var interest1 = ""
-		var amount1 = 0
-
-		var interest2 = ""
-		var amount2 = 0
-
-		var interest3 = ""
-		var amount3 = 0
-
-		var interest4 = ""
-		var amount4 = 0
-
-		var interest5 = ""
-		var amount5 = 0
-
-		var interest6 = ""
-		var amount6 = 0
-
-		var interest7 = ""
-		var amount7 = 0
-
-		var interest8 = ""
-		var amount8 = 0
-
 		new cbpScroller( document.getElementById( 'cbp-so-scroller' ) );
 
-			
+			// Doughnut Chart
+			var doughnutData = [
+			{
+				value: 37,
+				color:"#F44336",
+				highlight: "#EF5350",
+				label: "Sports"
+			},
+			{
+				value: 12,
+				color: "#46BFBD",
+				highlight: "#5AD3D1",
+				label: "Travel"
+			},
+			{
+				value: 27,
+				color: "#FDB45C",
+				highlight: "#FFC870",
+				label: "Food"
+			},
+			{
+				value: 22,
+				color: "#673AB7",
+				highlight: "#7E57C2",
+				label: "Music"
+			},
+			{
+				value: 32,
+				color: "#03A9F4",
+				highlight: "#29B6F6",
+				label: "Technology"
+			},
+			{
+				value: 11,
+				color: "#4CAF50",
+				highlight: "#66BB6A",
+				label: "Science"
+			},
+			{
+				value: 7,
+				color: "#FF9800",
+				highlight: "#FFA726",
+				label: "Lifestyle"
+			},
+			{
+				value: 29,
+				color: "#4D5360",
+				highlight: "#616774",
+				label: "Photography"
+			},
+			{
+				value: 15,
+				color: "#949FB1",
+				highlight: "#A8B3C5",
+				label: "Others"
+			}
+
+			];
 
 			// Radar Chart
 			var radarChartData = {
@@ -193,119 +221,9 @@
 			}
 
 			window.onload = function(){
-
-				Parse.initialize("7UFsHzCG5NRgycDbxVDDU0RZHhK81jWVWcBZHMOB", "TyxYhPqxv3VWwQHxqq947dxnuLVQwwkGgCCgwIyU");
-
-
-				var interest = Parse.Object.extend("InterestReport");
-    var interestQuery = new Parse.Query(interest);
-    
-    interestQuery.find({
-
-        success: function(results) {
-          //alert("Successfully retrieved " + results.length + " scores.");
-          // Do something with the returned Parse.Object values
-          total = results.length
-
-         interest0 = results[0].get('InterestName')
-		 amount0 = results[0].get('Weightage')
-
-		 interest1 = results[1].get('InterestName')
-		 amount1 = results[1].get('Weightage')
-
-		 interest2 = results[2].get('InterestName')
-		 amount2 = results[2].get('Weightage')
-
-		 interest3 = results[3].get('InterestName')
-		 amount3 = results[3].get('Weightage')
-
-		 interest4 = results[4].get('InterestName')
-		 amount4 = results[4].get('Weightage')
-
-		 interest5 = results[5].get('InterestName')
-		 amount5 = results[5].get('Weightage')
-
-		 interest6 = results[6].get('InterestName')
-		 amount6 = results[6].get('Weightage')
-
-		 interest7 = results[7].get('InterestName')
-		 amount7 = results[7].get('Weightage')
-
-		 interest8 = results[8].get('InterestName')
-		 amount8 = results[8].get('Weightage')
-
-		 // Doughnut Chart
-			var doughnutData = [
-			{
-				value: amount0,
-				color:"#F44336",
-				highlight: "#EF5350",
-				label: interest0
-			},
-			{
-				value: amount1,
-				color: "#46BFBD",
-				highlight: "#5AD3D1",
-				label: interest1
-			},
-			{
-				value: amount2,
-				color: "#FDB45C",
-				highlight: "#FFC870",
-				label: interest2
-			},
-			{
-				value: amount3,
-				color: "#673AB7",
-				highlight: "#7E57C2",
-				label: interest3
-			},
-			{
-				value: amount4,
-				color: "#03A9F4",
-				highlight: "#29B6F6",
-				label: interest4
-			},
-			{
-				value: amount5,
-				color: "#4CAF50",
-				highlight: "#66BB6A",
-				label: interest5
-			},
-			{
-				value: amount6,
-				color: "#FF9800",
-				highlight: "#FFA726",
-				label: interest6
-			},
-			{
-				value: amount7,
-				color: "#4D5360",
-				highlight: "#616774",
-				label: interest7
-			},
-			{
-				value: amount8,
-				color: "#949FB1",
-				highlight: "#A8B3C5",
-				label: interest8
-			}
-
-			];
-
-
-
 				var ctx = document.getElementById("chart-area").getContext("2d");
 				window.myDoughnut = new Chart(ctx).Doughnut(doughnutData, {responsive : true});
 				legend(document.getElementById('legend'), doughnutData, window.myDoughnut, "<%=label%>: <%=value%>");
-
-        },
-        error: function(error) {
-          alert("Error: " + error.code + " " + error.message);
-        }
-      });
-
-
 
 				window.myRadar = new Chart(document.getElementById("canvas").getContext("2d")).Radar(radarChartData, {
 					angleLineColor: "#fff",
