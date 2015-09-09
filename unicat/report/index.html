@@ -54,7 +54,7 @@
 			<section class="cbp-so-section">
 				<article class="cbp-so-side cbp-so-side-left">
 					<h2>Top 3 Interests Over Time</h2>
-					<p>Comparison of the top 3 interests: Sports, Technology and Photography, over a week.</p>
+					<p>Comparison of the top 3 interests: Community, Music and Art, over a week.</p>
 					<p><div id="legend-line"></div></p>
 				</article>
 				<figure class="cbp-so-side cbp-so-side-right">
@@ -154,43 +154,7 @@
 				]
 			};
 
-			// Line Chart
-			var lineChartData = {
-				labels : ["21/8","22/8","23/8","24/8","25/8","26/8","27/8"],
-				datasets : [
-				{
-					label: "Sports",
-					fillColor : "rgba(244,67,54,.1)",
-					strokeColor : "rgba(244,67,54,1)",
-					pointColor : "rgba(244,67,54,1)",
-					pointStrokeColor : "#fff",
-					pointHighlightFill : "#fff",
-					pointHighlightStroke : "rgba(244,67,54,1)",
-					data : [5,7,5,17,28,30,37]
-				},
-				{
-					label: "Technology",
-					fillColor : "rgba(3,169,244,.1)",
-					strokeColor : "rgba(3,169,244,1)",
-					pointColor : "rgba(3,169,244,1)",
-					pointStrokeColor : "#fff",
-					pointHighlightFill : "#fff",
-					pointHighlightStroke : "rgba(3,169,244,1)",
-					data : [0,5,12,23,20,17,32]
-				},
-				{
-					label: "Photography",
-					fillColor : "rgba(75,185,80,.1)",
-					strokeColor : "rgba(75,185,80,1)",
-					pointColor : "rgba(75,185,80,1)",
-					pointStrokeColor : "#fff",
-					pointHighlightFill : "#fff",
-					pointHighlightStroke : "rgba(75,185,80,1)",
-					data : [17,15,25,27,18,25,29]
-				}
-				]
-
-			}
+			
 
 			window.onload = function(){
 
@@ -293,11 +257,61 @@
 
 			];
 
+			// Line Chart
+			var lineChartData = {
+				labels : ["3/9","4/9","5/9","6/9","7/9","8/9","9/9"],
+				datasets : [
+				{
+					label: interest0,
+					fillColor : "rgba(244,67,54,.1)",
+					strokeColor : "rgba(244,67,54,1)",
+					pointColor : "rgba(244,67,54,1)",
+					pointStrokeColor : "#fff",
+					pointHighlightFill : "#fff",
+					pointHighlightStroke : "rgba(244,67,54,1)",
+					data : [5,27,33,56,92,100,amount0]
+				},
+				{
+					label: interest1,
+					fillColor : "rgba(3,169,244,.1)",
+					strokeColor : "rgba(3,169,244,1)",
+					pointColor : "rgba(3,169,244,1)",
+					pointStrokeColor : "#fff",
+					pointHighlightFill : "#fff",
+					pointHighlightStroke : "rgba(3,169,244,1)",
+					data : [0,25,53,60,78,83,amount1]
+				},
+				{
+					label: interest2,
+					fillColor : "rgba(75,185,80,.1)",
+					strokeColor : "rgba(75,185,80,1)",
+					pointColor : "rgba(75,185,80,1)",
+					pointStrokeColor : "#fff",
+					pointHighlightFill : "#fff",
+					pointHighlightStroke : "rgba(75,185,80,1)",
+					data : [17,43,60,65,71,90,amount2]
+				}
+				]
+
+			}
+
 
 
 				var ctx = document.getElementById("chart-area").getContext("2d");
 				window.myDoughnut = new Chart(ctx).Doughnut(doughnutData, {responsive : true});
 				legend(document.getElementById('legend'), doughnutData, window.myDoughnut, "<%=label%>: <%=value%>");
+
+
+				var ctx2 = document.getElementById("chart-line").getContext("2d");
+				window.myLine = new Chart(ctx2).Line(lineChartData, {
+					scaleGridLineColor : "rgba(255,255,255,.5)",
+					scaleLineColor: "rgba(255,255,255,.5)",
+					scaleFontColor: "#fff",
+					scaleFontSize: 14,
+					responsive: true
+				});
+
+				legend(document.getElementById('legend-line'), lineChartData, window.myLine);
 
         },
         error: function(error) {
@@ -315,16 +329,6 @@
 					responsive: true
 				});
 
-				var ctx2 = document.getElementById("chart-line").getContext("2d");
-				window.myLine = new Chart(ctx2).Line(lineChartData, {
-					scaleGridLineColor : "rgba(255,255,255,.5)",
-					scaleLineColor: "rgba(255,255,255,.5)",
-					scaleFontColor: "#fff",
-					scaleFontSize: 14,
-					responsive: true
-				});
-
-				legend(document.getElementById('legend-line'), lineChartData, window.myLine);
 			};
 
 		</script>
